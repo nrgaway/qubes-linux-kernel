@@ -93,7 +93,7 @@ Provides:       kernel-modeset = 1
 
 Requires(pre):  coreutils gawk
 Requires(post): dracut binutils
-Requires:       qubes-core-dom0-linux-kernel-install
+#Requires:       qubes-core-dom0-linux-kernel-install
 
 Conflicts:      sysfsutils < 2.0
 # root-lvm only works with newer udevs
@@ -119,19 +119,19 @@ Source100:      config-base
 Source101:      config-qubes
 %define modsign_cmd %{SOURCE18}
 
-Patch0: 0001-xen-netfront-detach-crash.patch
-Patch1: 0002-mce-hide-EBUSY-initialization-error-on-Xen.patch
-Patch2: 0003-Log-error-code-of-EVTCHNOP_bind_pirq-failure.patch
-Patch3: 0004-pvops-respect-removable-xenstore-flag-for-block-devi.patch
-Patch4: 0005-pvops-xen-blkfront-handle-FDEJECT-as-detach-request-.patch
-Patch5: 0006-block-add-no_part_scan-module-parameter.patch
-Patch6: 0007-xen-Add-RING_COPY_RESPONSE.patch
-Patch7: 0008-xen-netfront-copy-response-out-of-shared-buffer-befo.patch
-Patch8: 0009-xen-netfront-do-not-use-data-already-exposed-to-back.patch
-Patch9: 0010-xen-netfront-add-range-check-for-Tx-response-id.patch
-Patch10: 0011-xen-blkfront-make-local-copy-of-response-before-usin.patch
-Patch11: 0012-xen-blkfront-prepare-request-locally-only-then-put-i.patch
-Patch12: 0013-xen-pcifront-pciback-Update-pciif.h-with-err-and-res.patch
+#Patch0: 0001-xen-netfront-detach-crash.patch
+#Patch1: 0002-mce-hide-EBUSY-initialization-error-on-Xen.patch
+#Patch2: 0003-Log-error-code-of-EVTCHNOP_bind_pirq-failure.patch
+#Patch3: 0004-pvops-respect-removable-xenstore-flag-for-block-devi.patch
+#Patch4: 0005-pvops-xen-blkfront-handle-FDEJECT-as-detach-request-.patch
+#Patch5: 0006-block-add-no_part_scan-module-parameter.patch
+#Patch6: 0007-xen-Add-RING_COPY_RESPONSE.patch
+#Patch7: 0008-xen-netfront-copy-response-out-of-shared-buffer-befo.patch
+#Patch8: 0009-xen-netfront-do-not-use-data-already-exposed-to-back.patch
+#Patch9: 0010-xen-netfront-add-range-check-for-Tx-response-id.patch
+#Patch10: 0011-xen-blkfront-make-local-copy-of-response-before-usin.patch
+#Patch11: 0012-xen-blkfront-prepare-request-locally-only-then-put-i.patch
+#Patch12: 0013-xen-pcifront-pciback-Update-pciif.h-with-err-and-res.patch
 
 %description
 Qubes Dom0 kernel.
@@ -583,7 +583,7 @@ Provides:       kernel-qubes-domU
 
 Requires(pre):  coreutils gawk
 Requires(post): dracut
-Requires(post): qubes-core-dom0
+#Requires(post): qubes-core-dom0
 
 Conflicts:      sysfsutils < 2.0
 # root-lvm only works with newer udevs
